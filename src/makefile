@@ -1,5 +1,5 @@
 CXX = g++
-OBJECTS = main.o code_token.o lexer.o common.o
+OBJECTS = main.o code_token.o lexer.o common.o doc_token.o tokenizer.o
 CXXFLAGS = -std=c++0x
 
 run: build

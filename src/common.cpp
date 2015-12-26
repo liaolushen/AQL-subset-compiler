@@ -15,7 +15,7 @@ string Common::string_format(const string fmt_str, ...) {
     string str;
     unique_ptr<char[]> formatted;
     va_list ap;
-    while(1) {
+    while(true) {
         formatted.reset(new char[n]);
         strcpy(&formatted[0], fmt_str.c_str());
         va_start(ap, fmt_str);

@@ -9,7 +9,6 @@ using namespace std;
 
 class CodeToken {
 public:
-    CodeToken() {}
     /**
      * The types of code_token:
      * "create", "view", "ID", "as", "output", "as", "select", "from",
