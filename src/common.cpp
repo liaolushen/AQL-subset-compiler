@@ -39,3 +39,27 @@ bool Common::is_num(string s) {
     }
     return true;
 }
+
+bool Common::is_symbol(char a) {
+    if (is_char(a)) return false;
+    else if (a <= 176 && a >= 40) return true;
+    else return false;
+}
+
+int Common::string_to_int(string s) {
+    int num = 0;
+    for (int i = 0; i < s.size(); i++) {
+        num = num * 10 + (s[i] - '0');
+    }
+    return num;
+}
+
+string Common::get_file_name(char const *full_file_name) {
+    string full_name(full_file_name);
+    string name = "";
+    for (int i = full_name.size(); i >= 0; i--) {
+        if (full_name[i] != '/') name = string_format("%c%s", full_name[i], name.c_str());
+        else break;
+    }
+    return name;
+}

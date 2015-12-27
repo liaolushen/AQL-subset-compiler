@@ -15,10 +15,11 @@ using namespace std;
 
 class Tokenizer {
 public:
+    Tokenizer() {}
     Tokenizer(const char * file_name);
 
     string get_content();
-    vector<DocToken> get_tokens();
+    vector<DocToken> get_doc_tokens(int min, int max); // n represent the number of tokens connected;
 
     void print();
 private:

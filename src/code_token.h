@@ -13,7 +13,7 @@ public:
      * The types of code_token:
      * "create", "view", "ID", "as", "output", "as", "select", "from",
      * ".", "extract", "from", "regex", "REG", "on", "return", "group",
-     * "NUM", "pattern", "token", "(", ")", "<", ">", "{", "}", ";"
+     * "NUM", "pattern", "Token", "(", ")", "<", ">", "{", "}", ";"
      */
     CodeToken(string type, string value, int line_number);
 

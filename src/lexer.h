@@ -17,13 +17,13 @@ class Lexer {
 public:
     Lexer() {}
     Lexer(const char * file_name);
-    vector<CodeToken> get_aql_stmts();
+    vector<CodeToken> get_code_tokens();
 
     void print();
     
 private:
     void create_token(int for_point, int to_point, int &line_number);
     string content;
-    vector<CodeToken> aql_stmts;
+    vector<CodeToken> code_tokens;
 };
 #endif

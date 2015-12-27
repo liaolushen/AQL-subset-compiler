@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#include "common.h"
+
 using namespace std;
 
 
@@ -12,6 +14,7 @@ public:
     DocToken(string value, int start_pos, int end_pos);
 
     void print();
+    string get_value();
 
     string value;
     int start_pos;
