@@ -122,7 +122,7 @@ make clean
 * `pattern_expr`: pattern_expr → pattern_pkg | pattern_expr pattern_pkg
 * `pattern_pkg`: pattern_pkg → atom | atom_by_range | pattern_group
 * `name_spec`: name_spec → **as ID** | **return** group_spec
-* `atom`: atom → ** < ID.ID > ** | ** < Token > ** | **REG**
+* `atom`: atom → **< ID.ID >** | **< Token >** | **REG**
 * `atom_by_range`: atom_by_range → atom**{ NUM , NUM }**
 
 上面的生成式可能和给出的略有不同，我是为了便于处理做了一定的修改，但实际效果应该是差不多的。另外最后还有几个辅助函数，没有在生成式中表现出来，但是在其中也是起到了重要作用：
