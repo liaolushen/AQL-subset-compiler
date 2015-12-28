@@ -47,9 +47,9 @@ private:
     vector<string> name_spec(int point);
     vector<DocToken> atom(int point, map<string, string> from_list_map);
     vector<DocToken> atom_by_range(int point, map<string, string> from_list_map, int min, int max);
+
     vector<vector<DocToken> > link(vector<vector<DocToken> > pre_result, vector<DocToken> to_link, bool is_group);
     bool is_connect(int start_pos, int end_pos);
-
     vector<DocToken> find_all_to_token(string reg);
     void view_output(string view_name);
 };

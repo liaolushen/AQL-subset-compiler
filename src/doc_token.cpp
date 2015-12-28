@@ -13,6 +13,6 @@ void DocToken::print() {
     cout << value << "(" << start_pos << "," << end_pos << ")" << endl;
 }
 
-string DocToken::get_value() {
+string DocToken::to_string() {
     return string_format("%s:(%d,%d)", value.c_str(), start_pos, end_pos);
 }

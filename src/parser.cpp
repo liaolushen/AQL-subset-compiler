@@ -286,7 +286,7 @@ void Parser::view_output(string view_name) {
     for (int i = 0; i < key_list.size(); i++) {
         int group_size = 0;
         for (int j = 0; j < rows; j++) {
-            if (groups[key_list[i]][j].get_value().size() > group_size) group_size = groups[key_list[i]][j].get_value().size();
+            if (groups[key_list[i]][j].to_string().size() > group_size) group_size = groups[key_list[i]][j].to_string().size();
         }
         groups_size.push_back(group_size);
     }
@@ -303,8 +303,8 @@ void Parser::view_output(string view_name) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < key_list.size(); j++) {
             cout << "| ";
-            cout << groups[key_list[j]][i].get_value();
-            for (int k = groups[key_list[j]][i].get_value().size() + 1; k < groups_size[j] + 2; k++) cout << " ";
+            cout << groups[key_list[j]][i].to_string();
+            for (int k = groups[key_list[j]][i].to_string().size() + 1; k < groups_size[j] + 2; k++) cout << " ";
         }
         cout << "|" << endl;
     }

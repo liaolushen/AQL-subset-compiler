@@ -14,7 +14,7 @@ public:
     DocToken(string value, int start_pos, int end_pos);
 
     void print();
-    string get_value();
+    string to_string();
 
     string value;
     int start_pos;
