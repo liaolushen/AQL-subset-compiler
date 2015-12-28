@@ -242,6 +242,7 @@ vector<string> Parser::name_spec(int point) {
 
 void Parser::output_stmt(int point) {
     string view_name = stmt[point + 1].value;
+//    cout << "output_stmt" << endl;
     view_output(view_name);
 }
 

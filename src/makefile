@@ -5,6 +5,7 @@ CXXFLAGS = -std=c++0x
 run: build
 	./AQL ../dataset/PerLoc.aql ../dataset/perloc/PerLoc.input > ../dataset/perloc/PerLoc.output
 	./AQL ../dataset/Revenue.aql ../dataset/revenue/Revenue.input > ../dataset/revenue/Revenue.output
+	./AQL ../dataset/Art.aql ../dataset/art/Art.input > ../dataset/art/Art.output
 
 build: clean compile
 	$(CXX) -o AQL $(OBJECTS)

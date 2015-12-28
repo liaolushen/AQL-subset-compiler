@@ -1,0 +1,28 @@
+create view Pound as
+  extract regex /#+/
+    on D.text as Pound
+  from Document D;
+
+create view Line as
+  extract regex /[A-Za-z][A-Za-z ]*/
+    on D.text as Line
+  from Document D;
+
+create view Title as
+  extract pattern (<P.Pound>) (<L.Line>)
+  return group 0 as Title
+    and group 1 as Pound
+    and group 2 as Line
+  from Pound P, Line L;
+
+create view Title1 as
+  extract pattern (<P.Pound>) <Token>{3,5} (<L.Line>)
+  return group 0 as Title1
+    and group 1 as Pound
+    and group 2 as Line
+  from Pound P, Line L;
+
+output view Pound;
+output view Line;
+output view Title;
+output view Title1;

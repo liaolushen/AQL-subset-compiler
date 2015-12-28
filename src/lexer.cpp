@@ -29,6 +29,7 @@ Lexer::Lexer(const char *file_name) {
             }
         }
     }
+    if (to_point > for_point) create_token(for_point, to_point, line_number);
 }
 
 void Lexer::create_token(int for_point, int to_point, int &line_number) {
